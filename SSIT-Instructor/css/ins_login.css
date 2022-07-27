@@ -1,0 +1,253 @@
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior:smooth;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    /* background-image: url("../warehouse/Asset 2 1.png"); */
+    background-color: rgb(235, 228, 242);
+    /* background-size: 44vw; */
+    /* background-position:5vw 43.5vh; */
+    /* background-repeat: no-repeat; */
+}
+#sec1{
+    height:10vh;
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+#line1,#line2,#line3{
+    width:33%;
+    border:0;
+    height:10px;
+}
+#line1{
+    background:rgb(40, 151, 142);
+}
+#line2{
+    background:rgb(217, 92, 7);
+}
+#line3{
+    background:rgb(112, 72, 179);
+}
+/*  */
+#sec2{
+    height:90vh;
+    display: flex;
+    flex-direction: row;
+}
+#sec2>#left{
+    height:90vh;
+    display: flex;
+    flex-direction: column;
+    width:50vw;
+}
+#sec2>#left>#left_top{
+    height:30vh;
+    background:url("../warehouse/image 1.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+#sec2>#left>#left_bottom{
+    height:65vh;
+    background-image: url("../warehouse/Asset 2 1.png");
+    background-color: rgb(235, 228, 242);
+    background-size:contain;
+    background-position:1vw 0vh;
+    background-repeat: no-repeat;
+}
+#sec2>#right{
+    width:50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#sec2>#right>#login_box{
+    height:470px;
+    width:350px;
+    border-radius: 10px;
+    background:rgb(255, 255, 255);
+    box-shadow: -1px 2px 3px 1px rgba(0, 0, 0, 0.164);
+    /*  */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*  */
+}
+#login_box_heading{
+    width:100%;
+    text-align: center;
+    font-size: 19px;
+}
+#login_uid,#login_pass,#login_mail{
+    width:80%;
+    text-align: center;
+}
+/*  */
+img{
+    margin:0;
+    padding:0;
+}
+input{
+    height:80%;
+    width:85%;
+    border:none;
+    /* color:red; */
+    font-size: 20px;
+}
+input::placeholder{
+    color:rgb(162, 74, 255,0.5);
+    font-size: 20px;
+}
+input:focus{
+    outline: none;
+    border-right:2px solid red;
+}
+#login_uid,#login_pass,#login_mail{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(162, 74, 255,0.5);
+}
+/*  */
+#buttons{
+    height:10%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/*  */
+button{
+    border:none;
+    cursor:pointer;
+}
+/*  */
+#login_button_b{
+    height: 95%;
+    width:42%;
+    background: rgb(215, 178, 255);
+    color: black;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#forgot_pass_b{
+    height: 90%;
+    width:58%;
+    background: transparent;
+    color:rgb(162, 74, 255);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#reset_pass{
+    height:10%;
+    width:80%;
+    text-align: center;
+}
+#reset_pass_b{
+    height: 100%;
+    width:80%;
+    border:2px solid rgb(162, 74, 255);
+    color: rgb(162, 74, 255);
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+    border-radius: 10px;
+}
+#copyrights{
+    color:rgb(162, 74, 255);
+    font-weight:600;
+}
+/*  */
+.otp{
+    height:40px;
+    width:40px;
+    border:2px solid rgba(111, 72, 179, 0.712);
+    text-align: center;
+}
+/*  */
+#otp_container{
+    width:90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap:wrap;
+
+}
+#sent_to_mail{
+    width:90%;
+    color:rgba(111, 72, 179, 0.712);
+}
+#newpass,#confpass{
+    height:38%;
+    border-radius: 7px;
+    border:2px solid rgba(111, 72, 179, 0.712);
+    text-align: center;
+}
+#nph{
+    color:rgba(111, 72, 179, 0.712);
+    font-size: 30px;
+    height:25%;
+    width:80%;
+    justify-content: end;
+}
+#np{
+    height:25%;
+    width:80%;
+}
+.submit_newpass{
+    height:40% !important;
+    width:70% !important;
+}
+#npb{
+    height:25%;
+    width:80%;
+}
+#newpass,#confpass,.submit_newpass,#np,#nph,#npb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*---------------------------------------------------------*/
+@media screen and (max-width:500px){
+    #sec1{
+        width:100vw;
+    }
+    #sec2{
+        flex-direction: column;
+    }
+    #sec2>#left>#left_top{
+        width:100vw;
+        background-position: center;
+        background-size: 80%;
+    }
+    #sec2>#left>#left_bottom{
+        width:100vw;
+        height:100vw;
+        background-position: center;
+
+    }
+    #sec2>#right{
+        width:100vw;
+        margin-bottom:30px;
+    }
+    #sec2>#right>#login_box{
+        width:90vw;
+    }
+    #copyrights{
+        height:10vh;
+        font-size: 3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
