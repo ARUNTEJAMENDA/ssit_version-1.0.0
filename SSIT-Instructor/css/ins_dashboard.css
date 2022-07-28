@@ -309,9 +309,6 @@ main{
 }
 button{cursor:pointer;}
 /*---------add_courses_box---------*/
-#details_box1,#details_box2,#details_box3{
-    display: none;
-}
 #addcourses_box{
     height:100%;
     width:100%;
@@ -350,12 +347,15 @@ button{cursor:pointer;}
 progress{height:30%;width:50%;}#pbar_dots{width:50%;display: flex;justify-content: space-between;align-items: center;}#points{width:57%;display: flex;justify-content: space-between;align-items: center;}
 
 #details_box1, #details_box2, #details_box3{
-    height:75%;
+    height:100%;
     width:100%;
     /*  */
-    display: none;
+    display:none;
     flex-direction: column;
     justify-content: space-evenly;
+}
+#details_box1{
+    display: flex;
 }
 #details_box1 li,#details_box2 li,#details_box3 li,#rbottom li{
     all:initial;
@@ -402,6 +402,11 @@ progress{height:30%;width:50%;}#pbar_dots{width:50%;display: flex;justify-conten
 #add_fieldb:hover{
     color:red;
     transition:unset;
+}
+/* --------------------FORM-------------------- */
+#form1{
+    height:75%;
+    width:100%;
 }
 /*-------------------RESOURCES----------------------*/
 #resources_box{
@@ -460,6 +465,7 @@ td{
     border-right:2px solid rgba(128, 128, 128, 0.418);
     border-bottom:2px solid rgba(128, 128, 128, 0.418);
 }
+
 /*-----------------ADD RESOURCES--------------------*/
 #addresources_box{
     height:100%;

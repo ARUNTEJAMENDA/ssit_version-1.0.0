@@ -1,3 +1,4 @@
+<?php include "../repeats/top.php"?>
 <div id="addresources_box">
                 <div id="rtop"><span id="rheading">Resources/New item</span></div>
                 <div id="rbottom">//--▶◼▸--//
@@ -8,3 +9,4 @@
                     </li>
                 </div>
             </div>
+<?php include "../repeats/bottom.php"?>
