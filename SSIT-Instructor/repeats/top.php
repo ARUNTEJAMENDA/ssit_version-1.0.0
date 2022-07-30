@@ -29,4 +29,4 @@
         <section id="bottom">
             <?php include "../repeats/nav.php"?>
             <main id="main" name="main">
-<?php }else{header("location: ../ins_login.php");}?>
+<?php }else{header("location: ../index.php");}?>
