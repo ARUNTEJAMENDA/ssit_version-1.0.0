@@ -19,10 +19,10 @@
                         <span>Course Content</span>
                     </div>
                 </div>
-                <form id="form1" action="course_added.php" method="post" >
+                <form id="form1" action="course_added.php" method="post" enctype="multipart/form-data">
                 <!--------------------------------->
                 <div id="details_box1"><!--▶◼▸-->
-                    <li><div id="workshop_title"><span class="xz">▸&nbsp Workshop Title</span><!----><input type="text" name="wt" id="wt" placeholder="Title"></div>
+                    <li><div id="workshop_title"><span class="xz">▸&nbsp Workshop Title</span><!----><input type="text" name="wt" id="wt" placeholder="Title" title="**Title should be unique from other courses/Workshops**"></div>
                     </li><li><div id="duration"><span class="xz">▸&nbsp Duration</span><!----------------><input type="number"name="wdu" id="wdu" placeholder="Duration"></div>
                     </li><li><div id="workshop_image"><span class="xz"> ▸&nbspWorkshop Image</span><!----><input type="file" name="wf" id="wf" placeholder="Browse"></div>
                     </li><li><div id="language"><span class="xz">▸&nbspLanguage</span><!----------------><input type="text" name="wl" id="wl" placeholder="Language"></div>
@@ -39,7 +39,7 @@
                 <!--------------------------------->
                 <div id="details_box3" >
                     <li><div id="module_name"><span class="xz">▸&nbspAdd Module</span><input type="text" name="wm" id="wm" placeholder="Module Name"></div>
-                    </li><li><div id="topic_name"><span class="xz">▸&nbspAdd Topic</span><input type="text" name="wt" id="wt" placeholder="Topic Name"></div>
+                    </li><li><div id="topic_name"><span class="xz">▸&nbspAdd Topic</span><input type="text" name="wtp" id="wtp" placeholder="Topic Name"></div>
                     </li><li><div id="sub_topic"><span class="xz">▸&nbspAdd Sub Topic</span><input type="text" name="wst" id="wst" placeholder="Sub Topic Name"></div>
                     </li><li><div id="add_field"><DUMMY></DUMMY><button id="add_fieldb">Add Another Field +</button></div>
                     </li><li><div class="next"><button id="previous2"type="button">PREVIOUS</button><button id="next3" type="submit">ADD</button></div>

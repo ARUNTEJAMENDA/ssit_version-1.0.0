@@ -1,6 +1,7 @@
 <?php include "../repeats/top.php"?>
 <div id="resources_box">
-                <div id="rbtop"><span id="rheading">Resources</span></div>
+                <div id="rbtop"><span id="rheading">Resources</span><a href="add_resources.php"><button class="add_new">Add New +</button></a></div>
+                <!-- <div id="w_one"><span id="zx">Resources</span><a href="add_resources.php"><button class="add_new">Add New +</button></a></div> -->
                 <div id="rbbottom">
                     <table>
                         <tr id="table_heads"><th>#</th><th>Name of the Book</th><th>Size</th><th>Views</th><th>Downloads</th></tr>
