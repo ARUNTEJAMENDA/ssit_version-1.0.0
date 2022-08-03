@@ -74,6 +74,10 @@ header{
 #header_two{
     height:100%;
     width:30%;
+}
+#header_two a{
+    height:100%;
+    width:100%;
     /*  */
     display:flex;
     justify-content: center;
@@ -283,10 +287,10 @@ main{
     color:rgb(2, 44, 70);
 }
 #c_edit,#c_delete{
-    padding: 0 2px 0 2px;
+    padding: 0 3% 0 3%;
     /*  */
     height:65%;
-    width:30%;
+    width:max-content;
     /*  */
     font-weight: bold;
     border-radius: 7px;
@@ -446,25 +450,21 @@ progress{height:30%;width:50%;}#pbar_dots{width:50%;display: flex;justify-conten
 
 }
 table{
-    height:100%;
     width:80%;
     margin: 1% auto 2% auto;
     border-collapse: collapse;
     overflow-y: scroll;
 }
 #table_heads{
-    height:5vh;
+    height:30px;
     background-color:rgb(2, 44, 70);
     color: white;
 }
 th{
     border-radius: 10px 0px 10px 0px;
 }
-tr{
-    height:max-content;
-}
 td{
-    height:5vh !important;
+    height: 30px;
     text-align: center;
     border-left:2px solid rgba(61, 57, 57, 0.418);
     border-right:2px solid rgba(128, 128, 128, 0.418);

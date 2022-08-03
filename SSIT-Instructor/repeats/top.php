@@ -23,7 +23,7 @@
                     <h1>Welcome</h1>&nbsp&nbsp<h1 id="name"><?php echo $_SESSION['userid'];?></h1>
                 </div>
                 <div id="header_two">
-                    <img id="profile_pic" src="../warehouse/profile (2).png" alt="profile_pic" >
+                    <a href="../pages/profile.php"><img id="profile_pic" src="../warehouse/profile (2).png" alt="profile_pic" ></a>
                 </div>
             </header>
         </section>

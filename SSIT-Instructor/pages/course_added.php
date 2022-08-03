@@ -37,7 +37,8 @@
             $count0 = mysqli_num_rows($go0);
             // echo "<br>count:".$count0."<br>";
             if ($count0 == 0){
-                $query0 = "INSERT INTO `added_resources`(`ref_name`, `ref_author`, `ref_filesize`, `ref_views`, `ref_downloads`) VALUES('$ref_name','$ref_author','$size',0,0)";
+                $full_filename = $ref_name."_".$file;
+                $query0 = "INSERT INTO `added_resources`(`ref_name`, `ref_author`, `ref_filesize`, `ref_views`, `ref_downloads`,`uploadedby`) VALUES('$full_filename','$ref_author','$size',0,0,'$userid')";
                 if(mysqli_query($con,$query0)){
                     echo "<span class='green'>File uploaded!!</span>";
                 }
@@ -84,7 +85,7 @@
                 $count = mysqli_num_rows($go);
                 echo "<br>count:".$count."<br>";
                 if ($count == 0){
-                    $query = "INSERT INTO `added_courses`(`title`, `duration`, `image_name`, `language`, `prerequisites`, `description`, `module_name`, `topic_name`, `subtopic_name`) VALUES ('$title','$duration','$file','$lang','$prereq','$desc','$mod','$topic','$subtopic')";
+                    $query = "INSERT INTO `added_courses`(`title`, `duration`, `image_name`, `language`, `prerequisites`, `description`, `module_name`, `topic_name`, `subtopic_name`,`uploadedby`) VALUES ('$title','$duration','$file','$lang','$prereq','$desc','$mod','$topic','$subtopic','$userid')";
                     if(mysqli_query($con,$query)){
                         echo "course uploaded!!";
                     }
