@@ -491,7 +491,7 @@ td{
 #rbottom input,#rbottom button{
     font-size: 1.3vw;
 }
-#rbottom button{
+#rbottom input[type="submit"]{
     align-self: center;
     margin: 0 0 0 auto;
     height:80%;
