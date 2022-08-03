@@ -6,7 +6,12 @@
                     <table>
                         <tr id="table_heads"><th>#</th><th>Name of the Book</th><th>Size</th><th>Views</th><th>Downloads</th></tr>
                         <?php 
-                            echo "<tr><td></td><td>xxxx</td><td>xx</td><td>xxxxx</td><td>xxx</td></tr>";
+                            include "../apis/config.php";
+                            $query = "SELECT * from added_resources";
+                            $qrun = mysqli_query($con,$query);
+                            while($row = mysqli_fetch_assoc($qrun)){
+                                echo "<tr><td>".$row['sno']."</td><td>".$row['ref_name']."</td><td>".$row['ref_filesize']."</td><td>".$row['ref_views']."</td><td>".$row['ref_downloads']."</td></tr>";
+                            }
                         ?>
                         <!-- <tr><td></td><td>xxxx</td><td>xx</td><td>xxxxx</td><td>xxx</td></tr> -->
                         <!-- <script>for (var i= 0; i<50;i++){document.write("<tr><td>"+(i+1)+"</td><td>xxxx</td><td>xx</td><td>xxxxx</td><td>xxx</td></tr>")}</script> -->

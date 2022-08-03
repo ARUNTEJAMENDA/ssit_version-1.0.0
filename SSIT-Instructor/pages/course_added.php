@@ -32,12 +32,24 @@
         echo "<span class='danger'> Sorry, your file was not uploaded</span>.";
         // if everything is ok, try to upload file
         } else {
-            if (move_uploaded_file($_FILES["rfile"]["tmp_name"], $target_file)) {
-                echo "<br><span class='green'>The Resource file ". htmlspecialchars( basename( $_FILES["rfile"]["name"])). " has been uploaded Successfully.</span>.";
-            } else {
-                echo "<span class='danger'> Sorry, , there was an error uploading your file</span>.";
+            $checkexist = "SELECT * from `added_resources` where `ref_name` = '$ref_name'";
+            $go0 = mysqli_query($con,$checkexist);
+            $count0 = mysqli_num_rows($go0);
+            // echo "<br>count:".$count0."<br>";
+            if ($count0 == 0){
+                $query0 = "INSERT INTO `added_resources`(`ref_name`, `ref_author`, `ref_filesize`, `ref_views`, `ref_downloads`) VALUES('$ref_name','$ref_author','$size',0,0)";
+                if(mysqli_query($con,$query0)){
+                    echo "<span class='green'>File uploaded!!</span>";
+                }
+                if (move_uploaded_file($_FILES["rfile"]["tmp_name"], $target_file)) {
+                    echo "<br><span class='green'>The Resource file ". htmlspecialchars( basename( $_FILES["rfile"]["name"])). " has been uploaded Successfully.</span>.";
+                } else {
+                    echo "<span class='danger'> Sorry, there was an error uploading your file</span>.";
+                }
+            }else{
+                echo "<span class='danger'> file found in db!!</span>.";
             }
-        }    
+        }
     }else{
         //-----------
         $title = $_POST["wt"];

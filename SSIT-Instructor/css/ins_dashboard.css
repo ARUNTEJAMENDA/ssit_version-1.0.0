@@ -841,4 +841,7 @@ a:hover li,.navhighlighter{
 .danger{
     color:red;
     font-size: 1.5em;
+}.green{
+    color:rgb(151, 252, 0);
+    font-size: 1.5em;
 }
