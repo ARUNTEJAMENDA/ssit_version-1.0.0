@@ -13,7 +13,7 @@
                                 $query = "SELECT * from added_resources where `uploadedby` = '$userid'";
                                 $qrun = mysqli_query($con,$query);
                                 while($row = mysqli_fetch_assoc($qrun)){
-                                    echo "<tr class='table_rows'><td>".$row['sno']."</td><td>".$row['ref_name']."</td><td>".round($row['ref_filesize']/(1024*1024),2)."mb </td><td>".$row['ref_views']."</td><td>".$row['ref_downloads']."</td></tr>";
+                                    echo "<tr class='table_rows'><td>".$row['sno']."</td><td><a href='../client_goods/added_resources/".$row['ref_name']."'>".$row['ref_name']."</a></td><td>".round($row['ref_filesize']/(1024*1024),2)."mb </td><td>".$row['ref_views']."</td><td>".$row['ref_downloads']."</td></tr>";
                                 }
                             ?>
                         </tbody>

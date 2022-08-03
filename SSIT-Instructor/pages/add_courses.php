@@ -20,6 +20,7 @@
                     </div>
                 </div>
                 <form id="form1" action="course_added.php" method="post" enctype="multipart/form-data">
+                <input type="hidden" name = "msg" value="courses"/>
                 <!--------------------------------->
                 <div id="details_box1"><!--▶◼▸-->
                     <li><div id="workshop_title"><span class="xz">▸&nbsp Workshop Title</span><!----><input type="text" name="wt" id="wt" placeholder="Title" title="**Title should be unique from other courses/Workshops**" required></div>

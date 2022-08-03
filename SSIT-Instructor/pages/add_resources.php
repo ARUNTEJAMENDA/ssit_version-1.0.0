@@ -2,7 +2,7 @@
 <div id="addresources_box">
                 <div id="rtop"><span id="rheading">Resources/New item</span></div>
                 <form id="rbottom" action="course_added.php" method="post" enctype="multipart/form-data"><!--▶◼▸--->
-                    <input type="hidden" name = "resources" value="true"/>
+                    <input type="hidden" name = "msg" value="resources"/>
                     <li><div id="resource_title"><span class="xz">▸&nbsp Resource Title</span><!-----><input type="text" name="rt" id="rt" placeholder="Title" required></div>
                     </li><li><div id="author"><span class="xz">▸&nbsp Author</span><!----------------><input type="text" name="rn" id="rn" placeholder="Author name"></div>
                     </li><li><div id="r_upload"><span class="xz"> ▸&nbspWorkshop Image</span><!------><input type="file" name="rfile" id="rfile" placeholder="Browse" required></div>

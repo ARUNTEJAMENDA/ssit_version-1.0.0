@@ -4,7 +4,7 @@
 ?>
 <div id="course_added">
 <?php
-    if($_POST["resources"]){
+    if($_POST["msg"] == "resources"){
         $ref_name = $_POST["rt"];
         $ref_author = $_POST["rn"];
         // echo $ref_name." > ".$ref_author;
@@ -12,7 +12,7 @@
         $file = basename( $_FILES["rfile"]["name"]);
         echo "<span class='green'>Resource file: ".$file."</span>";
         $target_dir = "../client_goods/added_resources/";
-        $target_file = $target_dir.$ref_name."_".$userid."_".basename($_FILES["rfile"]["name"]);
+        $target_file = $target_dir.$ref_name."_".basename($_FILES["rfile"]["name"]);
         // echo $target_file;
         $uploadOk = 1;
         // Check if file already exists
@@ -51,7 +51,8 @@
                 echo "<span class='danger'> file found in db!!</span>.";
             }
         }
-    }else{
+    }else if($_POST["msg"] == "courses"){
+
         //-----------
         $title = $_POST["wt"];
         $duration = $_POST["wdu"];
@@ -83,14 +84,15 @@
                 $checkexist = "SELECT * from `added_courses` where `title` = '$title'";
                 $go = mysqli_query($con,$checkexist);
                 $count = mysqli_num_rows($go);
-                echo "<br>count:".$count."<br>";
+                // echo "<br>count:".$count."<br>";
                 if ($count == 0){
                     $query = "INSERT INTO `added_courses`(`title`, `duration`, `image_name`, `language`, `prerequisites`, `description`, `module_name`, `topic_name`, `subtopic_name`,`uploadedby`) VALUES ('$title','$duration','$file','$lang','$prereq','$desc','$mod','$topic','$subtopic','$userid')";
                     if(mysqli_query($con,$query)){
                         echo "course uploaded!!";
                     }
                     if (move_uploaded_file($_FILES["wf"]["tmp_name"], $target_file)) {
-                        echo "<h1>Course Added Successfully!!</h1><br>The file ". htmlspecialchars( basename( $_FILES["wf"]["name"])). " has been uploaded.";
+                        echo "Ϟ";
+                        // echo "<h1>Course Added Successfully!!</h1><br>The file ". htmlspecialchars( basename( $_FILES["wf"]["name"])). " has been uploaded.";
                     }
                     else {echo "<span class='danger'>Sorry, there was an error uploading your file.</span>";}
                 }else{
