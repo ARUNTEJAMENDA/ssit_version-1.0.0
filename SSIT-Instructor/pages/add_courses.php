@@ -1,4 +1,7 @@
-<?php include "../repeats/top.php"?>
+<?php
+    include "../repeats/top.php";
+    include "../apis/config.php";
+?>
 <div id="addcourses_box" >
                 <!------------------->
                 <div id="heading">
@@ -24,7 +27,7 @@
                 <!--------------------------------->
                 <div id="details_box1"><!--▶◼▸-->
                     <li><div id="workshop_title"><span class="xz">▸&nbsp Workshop Title</span><!----><input type="text" name="wt" id="wt" placeholder="Title" title="**Title should be unique from other courses/Workshops**" required></div>
-                    </li><li><div id="duration"><span class="xz">▸&nbsp Duration</span><!----------------><input type="number"name="wdu" id="wdu" placeholder="Duration" required></div>
+                    </li><li><div id="duration"><span class="xz">▸&nbsp Duration</span><!----------------><input type="number"name="wdu" id="wdu" placeholder="Duration in (Hours)" required></div>
                     </li><li><div id="workshop_image"><span class="xz"> ▸&nbspWorkshop Image</span><!----><input type="file" name="wf" id="wf" placeholder="Browse"></div>
                     </li><li><div id="language"><span class="xz">▸&nbspLanguage</span><!----------------><input type="text" name="wl" id="wl" placeholder="Language"></div>
                     </li><li><div id="prerequisites"><span class="xz">▸&nbspPrerequisites</span><!------><input type="text" name="wp" id="wp" placeholder="Prerequisites"></div>

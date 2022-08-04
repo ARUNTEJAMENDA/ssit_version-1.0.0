@@ -1,4 +1,7 @@
-<?php include "../repeats/top.php"?>
+<?php
+    include "../repeats/top.php";
+    include "../apis/config.php";
+?>
 <div id="addresources_box">
                 <div id="rtop"><span id="rheading">Resources/New item</span></div>
                 <form id="rbottom" action="course_added.php" method="post" enctype="multipart/form-data"><!--▶◼▸--->

@@ -1,6 +1,61 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
 --
--- Database: `id19331295_ssit`
+-- Host: 127.0.0.1
+-- Generation Time: Aug 04, 2022 at 09:02 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
+-- Database: `ssit`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `added_courses`
+--
+
+CREATE TABLE `added_courses` (
+  `sno` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `duration` varchar(255) NOT NULL,
+  `image_name` varchar(255) NOT NULL,
+  `language` varchar(255) NOT NULL,
+  `prerequisites` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `module_name` varchar(255) NOT NULL,
+  `topic_name` varchar(255) NOT NULL,
+  `subtopic_name` varchar(255) NOT NULL,
+  `uploadedby` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `added_resources`
+--
+
+CREATE TABLE `added_resources` (
+  `sno` int(11) NOT NULL,
+  `ref_name` varchar(255) NOT NULL,
+  `ref_author` varchar(255) NOT NULL,
+  `ref_filesize` varchar(255) NOT NULL,
+  `ref_views` varchar(255) NOT NULL,
+  `ref_downloads` varchar(255) NOT NULL,
+  `uploadedby` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -71,6 +126,19 @@ CREATE TABLE `reviews` (
 --
 
 --
+-- Indexes for table `added_courses`
+--
+ALTER TABLE `added_courses`
+  ADD PRIMARY KEY (`sno`),
+  ADD UNIQUE KEY `title` (`title`);
+
+--
+-- Indexes for table `added_resources`
+--
+ALTER TABLE `added_resources`
+  ADD PRIMARY KEY (`sno`);
+
+--
 -- Indexes for table `courses`
 --
 ALTER TABLE `courses`
@@ -92,6 +160,18 @@ ALTER TABLE `reviews`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `added_courses`
+--
+ALTER TABLE `added_courses`
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `added_resources`
+--
+ALTER TABLE `added_resources`
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `courses`

@@ -70,7 +70,7 @@
             echo "<span class='danger'>Course/ Workshop Title is Mandatory!!</span>";
         }else{
             $target_dir = "../client_goods/course_backgrounds/";
-            $target_file = $target_dir . $title."_".$_SESSION["userid"]."_".basename($_FILES["wf"]["name"]);
+            $target_file = $target_dir . $title."_".basename($_FILES["wf"]["name"]);
             $uploadOk = 1;
             $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
             //-------------for type checking
@@ -86,7 +86,8 @@
                 $count = mysqli_num_rows($go);
                 // echo "<br>count:".$count."<br>";
                 if ($count == 0){
-                    $query = "INSERT INTO `added_courses`(`title`, `duration`, `image_name`, `language`, `prerequisites`, `description`, `module_name`, `topic_name`, `subtopic_name`,`uploadedby`) VALUES ('$title','$duration','$file','$lang','$prereq','$desc','$mod','$topic','$subtopic','$userid')";
+                    $ffile = $title."_".$file;
+                    $query = "INSERT INTO `added_courses`(`title`, `duration`, `image_name`, `language`, `prerequisites`, `description`, `module_name`, `topic_name`, `subtopic_name`,`uploadedby`) VALUES ('$title','$duration','$ffile','$lang','$prereq','$desc','$mod','$topic','$subtopic','$userid')";
                     if(mysqli_query($con,$query)){
                         echo "course uploaded!!";
                     }
